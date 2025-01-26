@@ -1,6 +1,7 @@
 # thumbnail_generator_4creality
-Automatically creates 2 thumbnails for Creality, tested with Ender 3 V3 KE
-
+Voeg automatisch 2 thumbnails in gcode toe door Cura.
+Getest met Cura 5.9 and Creality Ender 3 V3 KE.
+ 
 # Script installeren in Cura:
 ## 1 Download het script:
 Kopieer de aangepaste scriptcode en sla het op als een Python-bestand met de naam:

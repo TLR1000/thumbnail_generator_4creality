@@ -22,10 +22,7 @@ Open de map scripts, deze bevindt zich meestal onder:
 Kopieer het bestand [Ender3V3KEAutoThumbnail.py](Ender3V3KEAutoThumbnail.py) naar deze map.  
 
 ## 3 Gebruik in Cura
-Cura voert standaard geen post-processing scripts automatisch uit.   
-Om dit script te activeren moet je het handmatig toevoegen.
-
-Ga naar de printerinstellingen:  
+Om dit script te activeren als post-processing script moet je het handmatig toevoegen.
 
 Open Cura.  
 Ga naar ```Extensions``` > ```Post Processing``` > ```Modify G-code```  
@@ -34,4 +31,4 @@ Klik op ```Add Script```
 En klaar. ```Close```
 
 Omdat het script nu geactiveerd is zie je rechtsonder in je Cura scherm iets met ```</>``` en tenminste een ```1``` erbij. Dit betekent dat een post processing script actief is.   
-Het genereren van de thumbnails gaat nu automatisch. 
+Het genereren van de thumbnails in de .gcode files gaat nu automatisch. 

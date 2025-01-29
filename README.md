@@ -8,7 +8,9 @@ Cura genereert geen thumbnails, en de postprocessing scripts uit de open source 
 Dit komt omdat er in de Creality firmware een afwijking zit voor interpretatie van thumbnails tov. de standaard die daarvoor is afgesproken. Bug of noodgedwongen feature? Anyway, dit script lost dat op.
 
 Wanneer je dit script installeert, zal Cura automatisch grote en kleine thumbnails aan de gcode file toevoegen waardoor je model precies zo de display van de printer wordt getoond als dat het in Cura wordt getoond.
-   
+
+<img src="thumb1.jpg"  width="25%" height="25%" alt=""> <img src="thumb2.jpg"  width="25%" height="25%" alt="">   
+
 # Script installeren in Cura:
 ## 1 Download het script:
 Download de scriptcode uit deze repository en sla ergens lokaal op onder de naam:  

@@ -36,3 +36,6 @@ En klaar. ```Close```
 
 Omdat het script nu geactiveerd is zie je rechtsonder in je Cura scherm iets met ```</>``` en tenminste een ```1``` erbij. Dit betekent dat een post processing script actief is.   
 Het genereren van de thumbnails in de .gcode files gaat nu automatisch. 
+
+### License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

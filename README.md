@@ -26,7 +26,7 @@ Kopieer het bestand [Ender3V3KEAutoThumbnail.py](Ender3V3KEAutoThumbnail.py) naa
 ## 3 Gebruik in Cura
 Om dit script te activeren als post-processing script moet je het handmatig toevoegen.
 
-Herstart Cura zodat het script geladen wordt.
+Herstart Cura zodat het script geladen wordt.   
 Ga naar ```Extensions``` > ```Post Processing``` > ```Modify G-code```  
 Selecteer ```Ender 3 Auto Thumbnail``` uit de lijst.
 Klik op ```Add Script```      

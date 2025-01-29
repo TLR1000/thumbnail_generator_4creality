@@ -1,11 +1,16 @@
-# thumbnail_generator_4creality
+# Thumbnail Generator For Creality
+Post processing script.
 Voeg automatisch 2 thumbnails in gcode toe door Cura.  
 Getest met Ultimaker Cura 5.9 and Creality Ender 3 V3 KE.  
- 
+
+# Wat dit oplost:
+Cura genereert geen thumbnails, en de postprocessing scripts uit de open source community genereren slechts 1 of een niet werkende thumbnail. 
+Dit komt omdat er in de Creality firmware een afwijking zit voor interpretatie van thumbnails tov. de standaard die daarvoor is afgesproken. Bug of noodgedwongen feature? Anyway, dit script lost dat op.
+
 # Script installeren in Cura:
 ## 1 Download het script:
-Kopieer de aangepaste scriptcode en sla het op als een Python-bestand met de naam:  
-Ender3V3KEAutoThumbnail.py  
+Download de scriptcode uit deze repository en sla ergens lokaal op onder de naam:  
+[Ender3V3KEAutoThumbnail.py](Ender3V3KEAutoThumbnail.py)
 Plaats het script in de juiste map:  
 
 ## 2 Installeer het script
@@ -14,24 +19,19 @@ Open Cura en ga naar:
 Open de map scripts, deze bevindt zich meestal onder:  
 ```C:\Users\<JouwNaam>\AppData\Roaming\cura\<Cura-versie>\scripts``` (Windows)  
 ```~/.local/share/cura/<Cura-versie>/scripts``` (Linux/Mac)  
-Kopieer het bestand [CreateEnder3V3KEThumbnail.py](CreateEnder3V3KEThumbnail.py) naar deze map.  
+Kopieer het bestand [Ender3V3KEAutoThumbnail.py](Ender3V3KEAutoThumbnail.py) naar deze map.  
 
-## 3 Configureer Cura
-Cura voert standaard geen post-processing scripts automatisch uit. Om dit te activeren, moeten we een printerconfiguratie aanpassen.  
+## 3 Gebruik in Cura
+Cura voert standaard geen post-processing scripts automatisch uit.   
+Om dit script te activeren moet je het handmatig toevoegen.
 
 Ga naar de printerinstellingen:  
 
 Open Cura.  
-Ga naar ```Preferences``` > ```Configure Cura``` > ```Printers```.  
-Selecteer je Creality Ender 3 V3 KE printer.  
-Klik op ```Machine Settings```.  
-Automatische post-processing toevoegen:  
+Ga naar ```Extensions``` > ```Post Processing``` > ```Modify G-code```  
+Selecteer ```Ender 3 Auto Thumbnail``` uit de lijst.
+Klik op ```Add Script```      
+En klaar. ```Close```
 
-Zoek de sectie "Post-processing scripts".  
-Voeg het volgende script toe als standaardwaarde:  
-```
-"post_process_script": {
-    "Ender3V3KEAutoThumbnail"
-}
-```
-Sla de wijzigingen op en sluit het venster.  
+Omdat het script nu geactiveerd is zie je rechtsonder in je Cura scherm iets met ```</>``` en tenminste een ```1``` erbij. Dit betekent dat een post processing script actief is.   
+Het genereren van de thumbnails gaat nu automatisch. 

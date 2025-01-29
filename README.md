@@ -1,4 +1,4 @@
-# Thumbnail Generator For Creality
+# Cura Thumbnail Generator For Creality
 Post processing script.
 Voeg automatisch 2 thumbnails in gcode toe door Cura.  
 Getest met Ultimaker Cura 5.9 and Creality Ender 3 V3 KE.  

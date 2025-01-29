@@ -7,6 +7,21 @@ class Ender3V3KEAutoThumbnail(Script):
     def __init__(self):
         super().__init__()
     
+    def getSettingDataString(self):
+        """
+        Retourneert een minimale instellingenstructuur om compatibiliteit met Cura te behouden.
+        """
+        return """{
+            "version": 2,
+            "name": "Ender-3 Auto Thumbnail",
+            "key": "Ender3V3KEAutoThumbnail",
+            "metadata": {
+                "author": "User",
+                "type": "postprocess"
+            },
+            "settings": {}
+        }"""
+    
     def generate_thumbnail(self, width, height):
         """
         Genereert een PNG-snapshot van het huidige model en zet deze om in base64.
@@ -27,7 +42,7 @@ class Ender3V3KEAutoThumbnail(Script):
 
     def execute(self, data):
         """
-        Genereert en injecteert meerdere thumbnails (96x96 en 300x300) in de G-code,
+        Genereert en injecteert vaste thumbnails (96x96 en 300x300) in de G-code,
         aangepast voor Creality Ender-3 compatibiliteit.
         """
         resolutions = [(96, 96), (300, 300)]
@@ -37,9 +52,9 @@ class Ender3V3KEAutoThumbnail(Script):
             encoded_snapshot, thumbnail_size = self.generate_thumbnail(width, height)
             base64_lines = [encoded_snapshot[i:i+76] for i in range(0, len(encoded_snapshot), 76)]
             
-            # Creality Ender-3 compatibele thumbnail headers
+            # Creality Ender-3 compatibele thumbnail headers (zonder spaties en juiste afsluiting)
             thumbnail_section = [
-                f"; png begin {width} * {height} {thumbnail_size} 0 95 160\n"
+                f"; png begin {width}*{height} {thumbnail_size} 0 95 192\n"
             ] + [f"; {line}\n" for line in base64_lines] + [
                 "; png end\n"
             ]
